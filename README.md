@@ -9,7 +9,7 @@
 ## Repository의 관리
 ---
 - Master branch에 새로 업로드되는 프로젝트들은 각 1개의 폴더로 업로드.
-- 별도의 branch들을 만들고 **숫자(01~)**를 붙여서 branch 별로 관리.
+- 별도의 branch들을 만들고 숫자(01~)를 붙여서 branch 별로 관리.
 
 
  
