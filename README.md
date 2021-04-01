@@ -1,15 +1,12 @@
-# Project-JB Repository
-
-## Repository의 목적
+# Project01 - Github 사이트 클론 코딩
 ---
-- 공부를 하며 진행할 각종 프로젝트 업로드를 위한 저장소 입니다.
-- 공부 외 별도로 개인적으로 만들 각종 프로젝트 업로드를 위한 저장소 입니다.
-
-
-## Repository의 관리
+## Summary
+- Html을 사용하여 사이트 제작에 있어 기본적인 구조 잡기
+- css를 통해 디자인 입히기 및 사이트 사이즈에 따른 구조 변환
+- javascript를 이용한 토글 버튼 만들기
 ---
-- Master branch에 새로 업로드되는 프로젝트들은 각 1개의 폴더로 업로드.
-- 별도의 branch들을 만들고 숫자(01~)를 붙여서 branch 별로 관리.
-
-
+## 사용 언어
+- Html
+- Css
+- Javascript
  
