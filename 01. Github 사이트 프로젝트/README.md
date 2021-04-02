@@ -25,6 +25,7 @@ GitHub 사이트의 메인 페이지를 반응형으로 작업합니다.
 ### General text
 
 ```
+```
 Personal
 Open source
 Business
@@ -33,7 +34,8 @@ Explore
 Pricing
 Blog
 Support
-
+```
+```
 How people build software
 Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
 
@@ -59,7 +61,8 @@ Where is GitHub?
 GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
 
 Public projects are always free. Work together across unlimited private repositories for $7 / month.
-
+```
+```
 © 2016 GitHub, Inc.
 Terms
 Privacy
