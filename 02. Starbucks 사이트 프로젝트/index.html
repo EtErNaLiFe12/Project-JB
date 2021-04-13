@@ -31,6 +31,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/main.css" />
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+  
+  <!-- SWIPER - 슬라이드 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
   <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -66,7 +73,9 @@
       <ul class="main-menu">
         <li class="item">
           <div class="item__name">COFFEE</div>
-          <div class="item__contents">
+          <!--BEM(Block Element Modifer) under bar __ 2개는 요소의 일부분 표시할때 사용  -->
+          <!--BEM(Block Element Modifer) dash bar -- 2개는 요소의 상태를 표시할때 사용  -->
+          <div class="item__contents"> 
             <div class="contents__menu">
               <ul class="inner">
                 <li>
@@ -363,9 +372,112 @@
           </div>
         </li>
       </ul>
-
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <img src="./images/badge1.jpg" alt="Badge" />
+      </div>
+      <div class="badge">
+        <img src="./images/badge2.jpg" alt="Badge" />
+      </div>
     </div>
   </header>
+
+<!-- SECTION -->
+  <section class="visual">
+    <div class="inner">
+
+      <div class="title fade-in">
+        <img src="./images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
+        <a href="javscript:void(0)" class="btn btn--brown">자세히 보기</a>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup1.png" alt="New Oatmeal Latte" class="cup1 image" />
+        <img src="./images/visual_cup1_text.png" alt="Oatmeal Latte" class="cup1 text" />
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup2.png" alt="New Caramel Crumble Mocha" class="cup2 image" />
+        <img src="./images/visual_cup2_text.png" alt="Caramel Crumble Mocha" class="cup2 text" />
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+      </div>
+    </div>
+  </section>
+
+
+<!-- NOTICE -->
+  <section class="notice">
+
+    <div class="notice-line">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+        <div class="inner__left">
+          <h2>공지사항</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">2021년 스타벅스 매장 영업시간 변경 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">스타벅스커피 코리아 애플리케이션 버젼 업데이트 안내</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">[당첨자 발표] New year 전자영수증 이벤트</a>
+              </div>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="notice-line__more">
+            <div class="material-icons">add_circle</div>
+          </a>
+        </div>
+        <div class="inner__right">
+          <h2>스타벅스 프로모션</h2>
+          <div class="toggle-promotion">
+            <div class="material-icons">upload</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="promotion">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide1.jpg" alt="2021 new year, 스타벅스와 함께 즐겁고 활기차게 시작하세요!">
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="스타벅스 카드 e-Gift 이벤트!">
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide3.jpg" alt="New year 음료 쿠폰 이벤트!">
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide4.jpg" alt="3만원 이상 구매 고객께 신년 MD 상품 포함 아메리카노(TALL)사이즈 쿠폰을 드립니다.">
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide5.jpg" alt="DIGITAL LUCKY DRAW!!">
+            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
+    </div>
+  </section>
   
   <!-- <span class="material-icons">login</span> -->
 </body>
