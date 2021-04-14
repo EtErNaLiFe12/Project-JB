@@ -34,11 +34,13 @@
   <!-- 외부 js 라이브러리 삽입!-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+  
   <!-- SWIPER - 슬라이드 -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!------!------->
 
+  <script defer src="./js/youtube.js"></script>
   <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -479,8 +481,35 @@
         </div>
     </div>
   </section>
+
+
+  <!--REWARDS-->
+  <section class="rewards">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+    <div class="inner">
+
+      <div class="btn-group">
+        <div class="btn btn--reverse sign-up">회원가입</div>
+        <div class="btn sign-in">로그인</div>
+        <div class="btn gift">e-Gift 선물하기</div>
+      </div>
+    </div>
+  </section>
   
-  <!-- <span class="material-icons">login</span> -->
+  <!-- YOUTUBE VIDEO -->
+  <section class="youtube">
+    <div class="youtube__area">
+      <div id="player"></div>
+    </div>
+    <div class="youtube__cover"></div>
+    <div class="inner">
+      <img src="./images/floating1.png" alt="Icon" class="floating floating1" />
+      <img src="./images/floating2.png" alt="Icon" class="floating floating2" />
+      <img src="./images/floating3.png" alt="Icon" class="floating floating3" />
+    </div>
+  </section>
+  
 </body>
 
 </html>
