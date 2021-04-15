@@ -18,10 +18,11 @@ searchInputEl.addEventListener('blur', function () {
 });
 
 
-//배지 이벤트 삽입
+//배지 & 버튼 보임/숨김 이벤트 삽입
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
-window.addEventListener('scroll', _.throttle(function () {
+window.addEventListener('scroll', _.throttle(function () { // _.throttle(함수, 시간)
   console.log(window.scrollY); 
   if (window.scrollY > 500) {
     //배지 숨기기
@@ -31,6 +32,10 @@ window.addEventListener('scroll', _.throttle(function () {
       opacity: 0,
       display: 'none'
     });
+    //버튼 보이기!
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   } else {
     // 배지 보이기
     //badgeEl.style.display = 'block';
@@ -38,9 +43,20 @@ window.addEventListener('scroll', _.throttle(function () {
       opacity: 1,
       display: 'block'
     });
+    //버튼 숨기기!
+    gsap.to(toTopEl, .2, {
+      x: 100
+    });
   }
 }, 300));
-// _.throttle(함수, 시간)
+
+//버튼 클릭시 0로 스크롤되는 이벤트 추가
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
+
 
 
 // fade-in 이벤트 삽입
@@ -83,6 +99,18 @@ new Swiper('.promotion .swiper-container', {
 });
 
 
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next',
+  }
+});
+
+
 //스타벅스 프로모션 버튼 (숨김/보임 처리) 이벤트 삽입
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
@@ -113,3 +141,46 @@ toggleRotateEl.addEventListener('click', function () {
     toggleProEl.classList.remove('rotate');
   }
 });
+
+//floating 애니메이션 삽입
+  // 범위 랜덤 함수(소수점 2자리까지)
+function random(min, max) {
+    // `toFixed()`를 통해 반환된 문자 데이터를
+    // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+function floatingObject(selector, delay, size) {
+  //gsap.to(요소, 시간, 옵션);
+  gsap.to(
+    selector, 
+    random(1.5, 2.5),  // 애니메이션 동작 시간
+    { //옵션
+      y: size, // y축
+      repeat: -1, // 무한반복
+      yoyo: true, // 왔다갔다를 반복하게 해줌\
+      ease: Power1.easeInOut,
+      delay: random(0, delay)
+    }
+  );
+} 
+floatingObject('.floating1', 1, 30);
+floatingObject('.floating2', .5, 30);
+floatingObject('.floating3', 1.5, 20);
+
+
+//scroll spy 이벤트 추가
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐의 여부를 감시할 요소를 지정
+      triggerHook: .8 // 감시하고 있는 요소가 어떤 지점에서 감시되었다는것을 판단할것인지...
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
+
+
+//년도 자동 출력 이벤트 추가
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); //2021
